@@ -16,11 +16,9 @@ configure<ComposeExtension> {
     forceRecreate = true //  // pass '--force-recreate' and '--renew-anon-volumes' when calling 'docker-compose up' when set to 'true`
     stopContainers = true // doesn't call `docker-compose down` if set to false - see below the paragraph about reconnecting; default is true
     removeContainers = true // default is true
+    useComposeFiles = listOf("MockServer/docker-compose.yml")
 }
 
-dockerCompose {
-    useComposeFiles = listOf("docker-compose.yml")
-}
 
 group = "me.atsu"
 version = "1.0-SNAPSHOT"
